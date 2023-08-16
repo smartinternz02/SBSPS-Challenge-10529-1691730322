@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AIR POLLUTION PREDICTION</title>
+        <style>
+            body {
+                background-image: url("static/placement.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+    
+            form {
+                background-color: rgba(164, 165, 72, 0.9);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            form table {
+                width: 100%;
+            }
+    
+            form table td {
+                padding: 8px;
+            }
+    
+            form input[type="text"],
+            form select {
+                width: 100%;
+                padding: 3.7px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            form input[type="submit"] {
+                background-color: #35376f;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            form input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+    
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+    
+            h2 {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+    
+            .center {
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h1>CAMPUS PLACEMENT PREDICTION</h1>
+    <form  action='/predict' method="POST">
+        <center>
+        <TABLE BORDER="0">
+        <tr>
+            <td>Gender:</td>
+            <td>
+            <select name="gender"  required="required">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        <br></td></tr><br>
+        <tr><td>Secondary Education percentage:</td><td><input type="text" name='ssc_p' placeholder="Enter 0% - 100%"></td></tr><br>
+        <tr><td>Board of Education:</td>
+            <td>
+            <select name="ssc_b"  required="required">
+            <option value="0">Central</option>
+            <option value="1">Others</option></td></tr>
+        <tr><td>Higher Secondary Education percentage- 12th Grade:</td><td><input type="text" name='hsc_p' placeholder="Enter 0% - 100%"></td></tr>
+        <tr><td>Board of Education:</td>
+            <td>
+            <select name="hsc_b"  required="required">
+            <option value="0">Central</option>
+            <option value="1">Others</option></td></tr>
+        <tr><td>Specialization in Higher Secondary Education:</td>
+            <td><select name="hsc_s"  required="required">
+            <option value="1">Commerce</option>
+            <option value="2">Science</option>
+            <option value="0">Arts</option></td></tr>
+        <tr><td>Degree Percentage:</td><td><input type="text" name='degree_p' placeholder="Enter 1% - 100%"></td></tr>
+        <tr><td>Under Graduation(Degree type):</td>
+            <td><select name="degree_t"  required="required">
+            <option value="0">Comm&Mgmt</option>
+            <option value="2">Sci&Tech</option>
+            <option value="1">Others</option></td></tr>
+        <tr><td>Work Experience:</td>
+            <td><select name="workex"  required="required">
+            <option value="1">Yes</option>
+            <option value="0">No</option></td></tr>
+        <tr><td>Employability test percentage :</td><td><input type="text" name='etest_p' placeholder="Enter 1% - 100%"></td></tr>
+        <tr><td>Post Graduation(MBA):</td>
+            <td><select name="specialisation"  required="required">
+            <option value="0">Mkt&Fin</option>
+            <option value="1">Mkt&HR</option></td></tr>
+        <tr><td>MBA percentage:</td><td><input type="text" name='mba_p' placeholder="Enter 0% - 100%"></td></tr>
+        </table><br>
+        <div class="center">
+        <input type="submit"  value="predict">
+    </div>
+        </form>
+    </div>
+    </center>
+    </body>
+</html>

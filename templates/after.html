@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("static/air.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            color: white;
+        }
+        
+        h1 {
+            font-family: Arial, sans-serif;
+            margin-top: 0;
+        }
+        
+        .result {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PLACEMENT RESULT</h1>
+    </header>
+    <div class="result">
+        {% if data == 0 %}
+            <h1>-------NOT PLACED-------</h1>
+        {% elif data == 1 %}
+            <h1>-------PLACED-------</h1>
+        {% endif %}
+    </div>
+    <h2>Generated Plot from the Given Data</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Generated Plot">
+</body>
+</html>
